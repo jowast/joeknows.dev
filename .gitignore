@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# build files
+public/build/
+
+# test output
+coverage/
+
+# local dev setup
+.vscode/
+certs/
+
+# local os setup
+.DS_Store
