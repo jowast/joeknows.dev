@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -17,13 +15,14 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
-				loader: 'loader 750ms linear infinite alternate',
+				loader: 'loader 700ms cubic-bezier(0.65, 0, 0.35, 1) infinite alternate',
 			},
-			colors: {
-				splash: '#1c1c24',
-			},
+      colors: {
+        "shade-light": "#3d3846",
+        "shade-dark": "#241f31"
+      },
 			fontFamily: {
-				sans: ['Outfit', 'Helvetica', 'Arial', 'sans-serif'],
+				sans: ['Lato', 'Helvetica', 'Arial', 'sans-serif'],
 			},
 			keyframes: {
 				loader: {
@@ -31,13 +30,9 @@ module.exports = {
 						transform: 'translateY(0)',
 						maxHeight: '8px',
 					},
-					'50%': {
+					'100%': {
 						transform: 'translateY(16px)',
 						maxHeight: '24px',
-					},
-					'100%': {
-						transform: 'translateY(32px)',
-						maxHeight: '8px',
 					},
 				},
 			},
